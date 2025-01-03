@@ -6,14 +6,17 @@ buttons.forEach(button => {
         const value = button.value;
         if (value === 'C') {
             display.value = '';
-        } else if (value === '=') {
+        } 
+        else if (value === '=') {
             try {
                 display.value = eval(display.value);
-            } catch {
+            } 
+            catch {
                 display.value = 'Error';
             }
-        } else {
+        } 
+        else {
             display.value += value;
         }
-    });
+    })
 });
