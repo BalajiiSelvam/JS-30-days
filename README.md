@@ -10,7 +10,7 @@ DAY - 3 ( TEXT ANALYZER )
 
 ![image](https://github.com/user-attachments/assets/beee8122-f0f4-4083-b8da-c457e05f2885)
 
-DAY - 4 ( COLOUR CHANGER )
+DAY - 4 ( COLOR CHANGER )
 
 ![image](https://github.com/user-attachments/assets/e5871185-888e-469e-b55e-d847d2bfbb4f)
 
