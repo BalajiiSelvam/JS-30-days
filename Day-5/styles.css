@@ -1,1 +1,43 @@
-/* Created Styles.css */
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.container:hover{
+        box-shadow: 0 0 15px rgba(189, 127, 255, 0.815);
+        border: 1px solid rgba(92, 9, 182, 0.815);
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(92, 9, 182, 0.815);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(124, 27, 227, 0.815);
+}
