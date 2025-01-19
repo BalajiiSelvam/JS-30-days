@@ -1,1 +1,31 @@
-/* Created Index.html */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="menu">
+            <h1 style="font-size: 25px;">Number System Converter</h1>
+            <p>1. DEC to BIN</p>
+            <p>2. BIN to DEC</p>
+            <!-- <p>3. DEC to OCT</p>
+            <p>4. OCT to DEC</p>
+            <p>5. DEC to HEX</p>
+            <p>6. HEX to DEC</p> -->
+            <input type="text" id="choice" placeholder="Enter your choice (1 or 2)">
+            <button onclick="showConverter()">Submit</button>
+        </div>
+        <div id="converter" style="display: none;">
+            <h2 id="converterTitle"></h2>
+            <input type="text" id="numberInput" placeholder="Enter number">
+            <button onclick="convert()">Convert</button>
+            <p>Result: <span id="result"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
