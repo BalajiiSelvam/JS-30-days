@@ -14,3 +14,8 @@ DAY - 4 ( COLOR CHANGER )
 
 ![image](https://github.com/user-attachments/assets/e5871185-888e-469e-b55e-d847d2bfbb4f)
 
+DAY - 5 ( NUMBER CONVERTER )
+
+![image](https://github.com/user-attachments/assets/a144553a-3d90-47d8-8d98-a1d924f6abaf)
+
+
