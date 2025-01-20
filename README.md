@@ -18,4 +18,7 @@ DAY - 5 ( NUMBER CONVERTER )
 
 ![image](https://github.com/user-attachments/assets/a144553a-3d90-47d8-8d98-a1d924f6abaf)
 
+DAY - 6 ( SIMPLE DOODLE )
+
+![image](https://github.com/user-attachments/assets/69e9dd76-645e-4894-8592-4b14c0b85212)
 
