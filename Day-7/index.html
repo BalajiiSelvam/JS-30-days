@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .upload-section {
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .upload-section:hover {
+            border-color: #4CAF50;
+            background-color: #f9f9f9;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: none;
+        }
+
+        #file-name {
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>File Character Counter</h1>
+        
+        <div class="upload-section" onclick="document.getElementById('file-input').click()">
+            <p>Click to select a file or drag and drop here</p>
+            <input type="file" id="file-input" accept=".txt,text/plain">
+            <p id="file-name"></p>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const resultDiv = document.getElementById('result');
+        const fileName = document.getElementById('file-name');
+        const uploadSection = document.querySelector('.upload-section');
+
+        // Handle file selection
+        fileInput.addEventListener('change', handleFile);
+
+        // Handle drag and drop
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.style.borderColor = '#4CAF50';
+        });
+
+        uploadSection.addEventListener('dragleave', () => {
+            uploadSection.style.borderColor = '#ccc';
+        });
+
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.style.borderColor = '#ccc';
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        function handleFile(event) {
+            const file = event.target?.files?.[0] || event;
+            if (!file) return;
+
+            if (file.type.startsWith('text/') || file.type === '') {
+                fileName.textContent = `Selected file: ${file.name}`;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const text = e.target.result;
+                    const charCount = text.length;
+                    resultDiv.style.display = 'block';
+                    resultDiv.innerHTML = `
+                        <strong>Character count:</strong> ${charCount.toLocaleString()}
+                    `;
+                };
+                reader.readAsText(file);
+            } else {
+                alert('Please select a valid text file (.txt)');
+            }
+        }
+    </script>
+</body>
+</html>
