@@ -22,3 +22,8 @@ DAY - 6 ( SIMPLE DOODLE )
 
 ![image](https://github.com/user-attachments/assets/69e9dd76-645e-4894-8592-4b14c0b85212)
 
+DAY - 7 ( CHARACTER COUNTER )
+
+![image](https://github.com/user-attachments/assets/d4d67009-9a00-4c21-8381-b1df99eb944a)
+
+
